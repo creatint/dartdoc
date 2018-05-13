@@ -1,6 +1,6 @@
 <ol>
   {{#clazz.hasPublicConstructors}}
-  <li class="section-title"><a href="{{clazz.href}}#constructors">¹¹Ôì·½·¨</a></li>
+  <li class="section-title"><a href="{{clazz.href}}#constructors">æ„é€ æ–¹æ³•</a></li>
   {{#clazz.publicConstructors}}
   <li><a{{#isDeprecated}} class="deprecated"{{/isDeprecated}} href="{{href}}">{{shortName}}</a></li>
   {{/clazz.publicConstructors}}
@@ -8,7 +8,7 @@
 
   {{#clazz.hasPublicProperties}}
   <li class="section-title{{ #allPublicInstancePropertiesInherited }} inherited{{ /allPublicInstancePropertiesInherited }}">
-    <a href="{{clazz.href}}#instance-properties">ÊôĞÔ</a>
+    <a href="{{clazz.href}}#instance-properties">å±æ€§</a>
   </li>
   {{#clazz.allPublicInstanceProperties}}
   <li{{ #isInherited }} class="inherited"{{ /isInherited}}>{{{ linkedName }}}</li>
@@ -16,35 +16,35 @@
   {{/clazz.hasPublicProperties}}
 
   {{#clazz.hasPublicMethods}}
-  <li class="section-title{{ #allPublicInstanceMethodsInherited }} inherited{{ /allPublicInstanceMethodsInherited }}"><a href="{{clazz.href}}#instance-methods">·½·¨</a></li>
+  <li class="section-title{{ #allPublicInstanceMethodsInherited }} inherited{{ /allPublicInstanceMethodsInherited }}"><a href="{{clazz.href}}#instance-methods">æ–¹æ³•</a></li>
   {{#clazz.allPublicInstanceMethods}}
   <li{{ #isInherited }} class="inherited"{{ /isInherited}}>{{{ linkedName }}}</li>
   {{/clazz.allPublicInstanceMethods}}
   {{/clazz.hasPublicMethods}}
 
   {{#clazz.hasPublicOperators}}
-  <li class="section-title{{ #allPublicOperatorsInherited }} inherited{{ /allPublicOperatorsInherited}}"><a href="{{clazz.href}}#operators">²Ù×÷·û</a></li>
+  <li class="section-title{{ #allPublicOperatorsInherited }} inherited{{ /allPublicOperatorsInherited}}"><a href="{{clazz.href}}#operators">æ“ä½œç¬¦</a></li>
   {{#clazz.allPublicOperators}}
   <li{{ #isInherited }} class="inherited"{{ /isInherited}}>{{{ linkedName }}}</li>
   {{/clazz.allPublicOperators}}
   {{/clazz.hasPublicOperators}}
 
   {{#clazz.hasPublicStaticProperties}}
-  <li class="section-title"><a href="{{clazz.href}}#static-properties">¾²Ì¬ÊôĞÔ</a></li>
+  <li class="section-title"><a href="{{clazz.href}}#static-properties">é™æ€å±æ€§</a></li>
   {{#clazz.publicStaticProperties}}
   <li>{{{ linkedName }}}</li>
   {{/clazz.publicStaticProperties}}
   {{/clazz.hasPublicStaticProperties}}
 
   {{#clazz.hasPublicStaticMethods}}
-  <li class="section-title"><a href="{{clazz.href}}#static-methods">¾²Ì¬·½·¨</a></li>
+  <li class="section-title"><a href="{{clazz.href}}#static-methods">é™æ€æ–¹æ³•</a></li>
   {{#clazz.publicStaticMethods}}
   <li>{{{ linkedName }}}</li>
   {{/clazz.publicStaticMethods}}
   {{/clazz.hasPublicStaticMethods}}
 
   {{#clazz.hasPublicConstants}}
-  <li class="section-title"><a href="{{clazz.href}}#constants">³£Á¿</a></li>
+  <li class="section-title"><a href="{{clazz.href}}#constants">å¸¸é‡</a></li>
   {{#clazz.publicConstants}}
   <li>{{{linkedName}}}</li>
   {{/clazz.publicConstants}}
