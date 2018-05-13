@@ -14,7 +14,7 @@
 
     {{#library.hasPublicClasses}}
     <section class="summary offset-anchor" id="classes">
-      <h2>类</h2>
+      <h2>Classes</h2>
 
       <dl>
         {{#library.publicClasses}}
@@ -31,7 +31,7 @@
 
     {{#library.hasPublicConstants}}
     <section class="summary offset-anchor" id="constants">
-      <h2>常量</h2>
+      <h2>Constants</h2>
 
       <dl class="properties">
         {{#library.publicConstants}}
@@ -43,7 +43,7 @@
 
     {{#library.hasPublicProperties}}
     <section class="summary offset-anchor" id="properties">
-      <h2>属性</h2>
+      <h2>Properties</h2>
 
       <dl class="properties">
         {{#library.publicProperties}}
@@ -55,7 +55,7 @@
 
     {{#library.hasPublicFunctions}}
     <section class="summary offset-anchor" id="functions">
-      <h2>函数</h2>
+      <h2>Functions</h2>
 
       <dl class="callables">
         {{#library.publicFunctions}}
@@ -67,7 +67,7 @@
 
     {{#library.hasPublicEnums}}
     <section class="summary offset-anchor" id="enums">
-      <h2>枚举</h2>
+      <h2>Enums</h2>
 
       <dl>
         {{#library.publicEnums}}
@@ -84,7 +84,7 @@
 
     {{#library.hasPublicTypedefs}}
     <section class="summary offset-anchor" id="typedefs">
-      <h2>定义</h2>
+      <h2>Typedefs</h2>
 
       <dl class="callables">
         {{#library.publicTypedefs}}
@@ -96,7 +96,7 @@
 
     {{#library.hasPublicExceptions}}
     <section class="summary offset-anchor" id="exceptions">
-      <h2>异常 / 错误</h2>
+      <h2>Exceptions / Errors</h2>
 
       <dl>
         {{#library.publicExceptions}}

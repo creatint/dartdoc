@@ -16,7 +16,7 @@
     <section>
       <dl class="dl-horizontal">
         {{#clazz.hasPublicSuperChainReversed}}
-        <dt>Inheritance</dt>
+        <dt>继承</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
           <li>{{{linkedObjectType}}}</li>
           {{#clazz.publicSuperChainReversed}}
@@ -27,7 +27,7 @@
         {{/clazz.hasPublicSuperChainReversed}}
 
         {{#clazz.hasPublicInterfaces}}
-        <dt>Implements</dt>
+        <dt>实现</dt>
         <dd>
           <ul class="comma-separated clazz-relationships">
             {{#clazz.publicInterfaces}}
@@ -38,7 +38,7 @@
         {{/clazz.hasPublicInterfaces}}
 
         {{#clazz.hasPublicMixins}}
-        <dt>Mixes-in</dt>
+        <dt>混入</dt>
         <dd><ul class="comma-separated clazz-relationships">
           {{#clazz.publicMixins}}
           <li>{{{linkedName}}}</li>
@@ -47,7 +47,7 @@
         {{/clazz.hasPublicMixins}}
 
         {{#clazz.hasPublicImplementors}}
-        <dt>Implemented by</dt>
+        <dt>实现者</dt>
         <dd><ul class="comma-separated clazz-relationships">
           {{#clazz.publicImplementors}}
           <li>{{{linkedName}}}</li>
@@ -56,7 +56,7 @@
         {{/clazz.hasPublicImplementors}}
 
         {{#clazz.hasAnnotations}}
-        <dt>Annotations</dt>
+        <dt>注解</dt>
         <dd><ul class="annotation-list clazz-relationships">
           {{#clazz.annotations}}
           <li>{{{.}}}</li>
@@ -69,7 +69,7 @@
 
     {{#clazz.hasPublicConstructors}}
     <section class="summary offset-anchor" id="constructors">
-      <h2>Constructors</h2>
+      <h2>构造方法</h2>
 
       <dl class="constructor-summary-list">
         {{#clazz.publicConstructors}}
@@ -92,7 +92,7 @@
 
     {{#clazz.hasPublicProperties}}
     <section class="summary offset-anchor{{ #allPublicInstancePropertiesInherited }} inherited{{ /allPublicInstancePropertiesInherited }}" id="instance-properties">
-      <h2>Properties</h2>
+      <h2>属性</h2>
 
       <dl class="properties">
         {{#clazz.allPublicInstanceProperties}}
@@ -104,7 +104,7 @@
 
     {{#clazz.hasPublicMethods}}
     <section class="summary offset-anchor{{ #allPublicInstanceMethodsInherited }} inherited{{ /allPublicInstanceMethodsInherited }}" id="instance-methods">
-      <h2>Methods</h2>
+      <h2>方法</h2>
       <dl class="callables">
         {{#clazz.allPublicInstanceMethods}}
         {{>callable}}
@@ -115,7 +115,7 @@
 
     {{#clazz.hasPublicOperators}}
     <section class="summary offset-anchor{{ #allPublicOperatorsInherited }} inherited{{ /allPublicOperatorsInherited}}" id="operators">
-      <h2>Operators</h2>
+      <h2>操作符</h2>
       <dl class="callables">
         {{#clazz.allPublicOperators}}
         {{>callable}}
@@ -126,7 +126,7 @@
 
     {{#clazz.hasPublicStaticProperties}}
     <section class="summary offset-anchor" id="static-properties">
-      <h2>Static Properties</h2>
+      <h2>静态属性</h2>
 
       <dl class="properties">
         {{#clazz.publicStaticProperties}}
@@ -138,7 +138,7 @@
 
     {{#clazz.hasPublicStaticMethods}}
     <section class="summary offset-anchor" id="static-methods">
-      <h2>Static Methods</h2>
+      <h2>静态方法</h2>
       <dl class="callables">
         {{#clazz.publicStaticMethods}}
         {{>callable}}
@@ -149,7 +149,7 @@
 
     {{#clazz.hasPublicConstants}}
     <section class="summary offset-anchor" id="constants">
-      <h2>Constants</h2>
+      <h2>常量</h2>
 
       <dl class="properties">
         {{#clazz.publicConstants}}

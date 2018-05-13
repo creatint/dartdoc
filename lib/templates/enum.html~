@@ -16,7 +16,7 @@
     <section>
       <dl class="dl-horizontal">
         {{#eNum.hasPublicSuperChainReversed}}
-        <dt>继承</dt>
+        <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark eNum-relationships">
           <li>{{{linkedObjectType}}}</li>
           {{#eNum.publicSuperChainReversed}}
@@ -27,7 +27,7 @@
         {{/eNum.hasPublicSuperChainReversed}}
 
         {{#eNum.hasPublicInterfaces}}
-        <dt>实现</dt>
+        <dt>Implements</dt>
         <dd>
           <ul class="comma-separated eNum-relationships">
             {{#eNum.publicInterfaces}}
@@ -38,7 +38,7 @@
         {{/eNum.hasPublicInterfaces}}
 
         {{#eNum.hasPublicMixins}}
-        <dt>混入</dt>
+        <dt>Mixes-in</dt>
         <dd><ul class="comma-separated eNum-relationships">
           {{#eNum.publicMixins}}
           <li>{{{linkedName}}}</li>
@@ -47,7 +47,7 @@
         {{/eNum.hasPublicMixins}}
 
         {{#eNum.hasPublicImplementors}}
-        <dt>实现者</dt>
+        <dt>Implemented by</dt>
         <dd><ul class="comma-separated eNum-relationships">
           {{#eNum.publicImplementors}}
           <li>{{{linkedName}}}</li>
@@ -56,7 +56,7 @@
         {{/eNum.hasPublicImplementors}}
 
         {{#eNum.hasAnnotations}}
-        <dt>注解</dt>
+        <dt>Annotations</dt>
         <dd><ul class="annotation-list eNum-relationships">
           {{#eNum.annotations}}
           <li>{{{.}}}</li>
@@ -69,7 +69,7 @@
 
     {{#eNum.hasPublicConstants}}
     <section class="summary offset-anchor" id="constants">
-      <h2>常量</h2>
+      <h2>Constants</h2>
 
       <dl class="properties">
         {{#eNum.publicConstants}}
@@ -81,7 +81,7 @@
 
     {{#eNum.hasPublicConstructors}}
     <section class="summary offset-anchor" id="constructors">
-      <h2>构造方法</h2>
+      <h2>Constructors</h2>
 
       <dl class="constructor-summary-list">
         {{#eNum.publicConstructors}}
@@ -104,7 +104,7 @@
 
     {{#eNum.hasPublicProperties}}
     <section class="summary offset-anchor{{ #allPublicInstancePropertiesInherited }} inherited{{ /allPublicInstancePropertiesInherited }}" id="instance-properties">
-      <h2>属性</h2>
+      <h2>Properties</h2>
 
       <dl class="properties">
         {{#eNum.allPublicInstanceProperties}}
@@ -116,7 +116,7 @@
 
     {{#eNum.hasPublicMethods}}
     <section class="summary offset-anchor{{ #allPublicInstanceMethodsInherited }} inherited{{ /allPublicInstanceMethodsInherited }}" id="instance-methods">
-      <h2>方法</h2>
+      <h2>Methods</h2>
       <dl class="callables">
         {{#eNum.allPublicInstanceMethods}}
         {{>callable}}
@@ -127,7 +127,7 @@
 
     {{#eNum.hasPublicOperators}}
     <section class="summary offset-anchor{{ #allPublicOperatorsInherited }} inherited{{ /allPublicOperatorsInherited}}" id="operators">
-      <h2>操作符</h2>
+      <h2>Operators</h2>
       <dl class="callables">
         {{#eNum.allPublicOperators}}
         {{>callable}}
@@ -138,7 +138,7 @@
 
     {{#eNum.hasPublicStaticProperties}}
     <section class="summary offset-anchor" id="static-properties">
-      <h2>静态属性</h2>
+      <h2>Static Properties</h2>
 
       <dl class="properties">
         {{#eNum.publicStaticProperties}}
@@ -150,7 +150,7 @@
 
     {{#eNum.hasPublicStaticMethods}}
     <section class="summary offset-anchor" id="static-methods">
-      <h2>静态方法</h2>
+      <h2>Static Methods</h2>
       <dl class="callables">
         {{#eNum.publicStaticMethods}}
         {{>callable}}

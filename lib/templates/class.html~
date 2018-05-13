@@ -6,85 +6,73 @@
   </div>
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-    <h1>{{self.name}} {{self.kind}}</h1>
+    <h1>{{{self.nameWithGenerics}}} {{self.kind}}</h1>
 
-    {{#eNum}}
+    {{#clazz}}
     {{>documentation}}
-    {{/eNum}}
+    {{/clazz}}
 
-    {{#eNum.hasModifiers}}
+    {{#clazz.hasModifiers}}
     <section>
       <dl class="dl-horizontal">
-        {{#eNum.hasPublicSuperChainReversed}}
+        {{#clazz.hasPublicSuperChainReversed}}
         <dt>继承</dt>
-        <dd><ul class="gt-separated dark eNum-relationships">
+        <dd><ul class="gt-separated dark clazz-relationships">
           <li>{{{linkedObjectType}}}</li>
-          {{#eNum.publicSuperChainReversed}}
+          {{#clazz.publicSuperChainReversed}}
           <li>{{{linkedName}}}</li>
-          {{/eNum.publicSuperChainReversed}}
+          {{/clazz.publicSuperChainReversed}}
           <li>{{{name}}}</li>
         </ul></dd>
-        {{/eNum.hasPublicSuperChainReversed}}
+        {{/clazz.hasPublicSuperChainReversed}}
 
-        {{#eNum.hasPublicInterfaces}}
+        {{#clazz.hasPublicInterfaces}}
         <dt>实现</dt>
         <dd>
-          <ul class="comma-separated eNum-relationships">
-            {{#eNum.publicInterfaces}}
+          <ul class="comma-separated clazz-relationships">
+            {{#clazz.publicInterfaces}}
             <li>{{{linkedName}}}</li>
-            {{/eNum.publicInterfaces}}
+            {{/clazz.publicInterfaces}}
           </ul>
         </dd>
-        {{/eNum.hasPublicInterfaces}}
+        {{/clazz.hasPublicInterfaces}}
 
-        {{#eNum.hasPublicMixins}}
+        {{#clazz.hasPublicMixins}}
         <dt>混入</dt>
-        <dd><ul class="comma-separated eNum-relationships">
-          {{#eNum.publicMixins}}
+        <dd><ul class="comma-separated clazz-relationships">
+          {{#clazz.publicMixins}}
           <li>{{{linkedName}}}</li>
-          {{/eNum.publicMixins}}
+          {{/clazz.publicMixins}}
         </ul></dd>
-        {{/eNum.hasPublicMixins}}
+        {{/clazz.hasPublicMixins}}
 
-        {{#eNum.hasPublicImplementors}}
+        {{#clazz.hasPublicImplementors}}
         <dt>实现者</dt>
-        <dd><ul class="comma-separated eNum-relationships">
-          {{#eNum.publicImplementors}}
+        <dd><ul class="comma-separated clazz-relationships">
+          {{#clazz.publicImplementors}}
           <li>{{{linkedName}}}</li>
-          {{/eNum.publicImplementors}}
+          {{/clazz.publicImplementors}}
         </ul></dd>
-        {{/eNum.hasPublicImplementors}}
+        {{/clazz.hasPublicImplementors}}
 
-        {{#eNum.hasAnnotations}}
-        <dt>注解</dt>
-        <dd><ul class="annotation-list eNum-relationships">
-          {{#eNum.annotations}}
+        {{#clazz.hasAnnotations}}
+        <dt>Annotations</dt>
+        <dd><ul class="annotation-list clazz-relationships">
+          {{#clazz.annotations}}
           <li>{{{.}}}</li>
-          {{/eNum.annotations}}
+          {{/clazz.annotations}}
         </ul></dd>
-        {{/eNum.hasAnnotations}}
+        {{/clazz.hasAnnotations}}
       </dl>
     </section>
-    {{/eNum.hasModifiers}}
+    {{/clazz.hasModifiers}}
 
-    {{#eNum.hasPublicConstants}}
-    <section class="summary offset-anchor" id="constants">
-      <h2>常量</h2>
-
-      <dl class="properties">
-        {{#eNum.publicConstants}}
-        {{>constant}}
-        {{/eNum.publicConstants}}
-      </dl>
-    </section>
-    {{/eNum.hasPublicConstants}}
-
-    {{#eNum.hasPublicConstructors}}
+    {{#clazz.hasPublicConstructors}}
     <section class="summary offset-anchor" id="constructors">
       <h2>构造方法</h2>
 
       <dl class="constructor-summary-list">
-        {{#eNum.publicConstructors}}
+        {{#clazz.publicConstructors}}
         <dt id="{{htmlId}}" class="callable">
           <span class="name">{{{linkedName}}}</span><span class="signature">({{{ linkedParams }}})</span>
         </dt>
@@ -97,72 +85,84 @@
           <div class="constructor-modifier features">factory</div>
           {{/isFactory}}
         </dd>
-        {{/eNum.publicConstructors}}
+        {{/clazz.publicConstructors}}
       </dl>
     </section>
-    {{/eNum.hasPublicConstructors}}
+    {{/clazz.hasPublicConstructors}}
 
-    {{#eNum.hasPublicProperties}}
+    {{#clazz.hasPublicProperties}}
     <section class="summary offset-anchor{{ #allPublicInstancePropertiesInherited }} inherited{{ /allPublicInstancePropertiesInherited }}" id="instance-properties">
       <h2>属性</h2>
 
       <dl class="properties">
-        {{#eNum.allPublicInstanceProperties}}
+        {{#clazz.allPublicInstanceProperties}}
         {{>property}}
-        {{/eNum.allPublicInstanceProperties}}
+        {{/clazz.allPublicInstanceProperties}}
       </dl>
     </section>
-    {{/eNum.hasPublicProperties}}
+    {{/clazz.hasPublicProperties}}
 
-    {{#eNum.hasPublicMethods}}
+    {{#clazz.hasPublicMethods}}
     <section class="summary offset-anchor{{ #allPublicInstanceMethodsInherited }} inherited{{ /allPublicInstanceMethodsInherited }}" id="instance-methods">
       <h2>方法</h2>
       <dl class="callables">
-        {{#eNum.allPublicInstanceMethods}}
+        {{#clazz.allPublicInstanceMethods}}
         {{>callable}}
-        {{/eNum.allPublicInstanceMethods}}
+        {{/clazz.allPublicInstanceMethods}}
       </dl>
     </section>
-    {{/eNum.hasPublicMethods}}
+    {{/clazz.hasPublicMethods}}
 
-    {{#eNum.hasPublicOperators}}
+    {{#clazz.hasPublicOperators}}
     <section class="summary offset-anchor{{ #allPublicOperatorsInherited }} inherited{{ /allPublicOperatorsInherited}}" id="operators">
       <h2>操作符</h2>
       <dl class="callables">
-        {{#eNum.allPublicOperators}}
+        {{#clazz.allPublicOperators}}
         {{>callable}}
-        {{/eNum.allPublicOperators}}
+        {{/clazz.allPublicOperators}}
       </dl>
     </section>
-    {{/eNum.hasPublicOperators}}
+    {{/clazz.hasPublicOperators}}
 
-    {{#eNum.hasPublicStaticProperties}}
+    {{#clazz.hasPublicStaticProperties}}
     <section class="summary offset-anchor" id="static-properties">
       <h2>静态属性</h2>
 
       <dl class="properties">
-        {{#eNum.publicStaticProperties}}
+        {{#clazz.publicStaticProperties}}
         {{>property}}
-        {{/eNum.publicStaticProperties}}
+        {{/clazz.publicStaticProperties}}
       </dl>
     </section>
-    {{/eNum.hasPublicStaticProperties}}
+    {{/clazz.hasPublicStaticProperties}}
 
-    {{#eNum.hasPublicStaticMethods}}
+    {{#clazz.hasPublicStaticMethods}}
     <section class="summary offset-anchor" id="static-methods">
       <h2>静态方法</h2>
       <dl class="callables">
-        {{#eNum.publicStaticMethods}}
+        {{#clazz.publicStaticMethods}}
         {{>callable}}
-        {{/eNum.publicStaticMethods}}
+        {{/clazz.publicStaticMethods}}
       </dl>
     </section>
-    {{/eNum.hasPublicStaticMethods}}
+    {{/clazz.hasPublicStaticMethods}}
+
+    {{#clazz.hasPublicConstants}}
+    <section class="summary offset-anchor" id="constants">
+      <h2>常量</h2>
+
+      <dl class="properties">
+        {{#clazz.publicConstants}}
+        {{>constant}}
+        {{/clazz.publicConstants}}
+      </dl>
+    </section>
+    {{/clazz.hasPublicConstants}}
 
   </div> <!-- /.main-content -->
 
   <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
-    {{>sidebar_for_enum}}
+    {{>sidebar_for_class}}
   </div><!--/.sidebar-offcanvas-->
 
 {{>footer}}
