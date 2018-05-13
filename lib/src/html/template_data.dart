@@ -91,14 +91,14 @@ class PackageTemplateData extends TemplateData<PackageGraph> {
   @override
   List get navLinks => [];
   @override
-  String get title => '${packageGraph.name} - Dart API docs';
+  String get title => '${packageGraph.name} - Dart API docs 中文文档';
   @override
   PackageGraph get self => packageGraph;
   @override
   String get layoutTitle => _layoutTitle(packageGraph.name, kind, false);
   @override
   String get metaDescription =>
-      '${packageGraph.name} API docs, for the Dart programming language.';
+      '${packageGraph.name} API docs, Dart 中文文档';
   @override
   Iterable<Subnav> getSubNavItems() {
     return [new Subnav('Libraries', '${packageGraph.href}#libraries')];
@@ -125,14 +125,14 @@ class LibraryTemplateData extends TemplateData<Library> {
       : super(htmlOptions, packageGraph);
 
   @override
-  String get title => '${library.name} library - Dart API';
+  String get title => '${library.name} library - Dart API 中文文档';
   @override
   String get documentation => library.documentation;
   @override
   String get htmlBase => '..';
   @override
   String get metaDescription =>
-      '${library.name} library API docs, for the Dart programming language.';
+      '${library.name} library, Dart 中文文档';
   @override
   List get navLinks => [packageGraph];
   @override
@@ -180,7 +180,7 @@ class ClassTemplateData extends TemplateData<Class> {
   @override
   String get metaDescription =>
       'API docs for the ${clazz.name} ${clazz.kind} from the '
-      '${library.name} library, for the Dart programming language.';
+      '${library.name} library, Dart 中文文档';
 
   @override
   String get layoutTitle => _layoutTitle(
@@ -252,7 +252,7 @@ class ConstructorTemplateData extends TemplateData<Constructor> {
   String get metaDescription =>
       'API docs for the ${constructor.name} constructor from the '
       '${clazz} class from the ${library.name} library, '
-      'for the Dart programming language.';
+      'Dart 中文文档';
 }
 
 class EnumTemplateData extends TemplateData<Enum> {
@@ -271,7 +271,7 @@ class EnumTemplateData extends TemplateData<Enum> {
   @override
   String get metaDescription =>
       'API docs for the ${eNum.name} enum from the ${library.name} library, '
-      'for the Dart programming language.';
+      'Dart 中文文档';
   @override
   List get navLinks => [packageGraph, library];
   @override
@@ -304,7 +304,7 @@ class FunctionTemplateData extends TemplateData<ModelFunction> {
   @override
   String get metaDescription =>
       'API docs for the ${function.name} function from the '
-      '${library.name} library, for the Dart programming language.';
+      '${library.name} library, Dart 中文文档';
   @override
   List get navLinks => [packageGraph, library];
   @override
@@ -326,14 +326,14 @@ class MethodTemplateData extends TemplateData<Method> {
   Method get self => method;
   @override
   String get title => '${method.name} method - ${clazz.name} class - '
-      '${library.name} library - Dart API';
+      '${library.name} library - Dart API 中文文档';
   @override
   String get layoutTitle => _layoutTitle(
       method.nameWithGenerics, method.fullkind, method.isDeprecated);
   @override
   String get metaDescription =>
       'API docs for the ${method.name} method from the ${clazz.name} class, '
-      'for the Dart programming language.';
+      'Dart 中文文档';
   @override
   List get navLinks => [packageGraph, library];
   @override
@@ -358,14 +358,14 @@ class PropertyTemplateData extends TemplateData<Field> {
 
   @override
   String get title => '${property.name} $type - ${clazz.name} class - '
-      '${library.name} library - Dart API';
+      '${library.name} library - Dart API 中文文档';
   @override
   String get layoutTitle =>
       _layoutTitle(property.name, type, property.isDeprecated);
   @override
   String get metaDescription =>
       'API docs for the ${property.name} $type from the ${clazz.name} class, '
-      'for the Dart programming language.';
+      'Dart 中文文档';
   @override
   List get navLinks => [packageGraph, library];
   @override
@@ -398,14 +398,14 @@ class TypedefTemplateData extends TemplateData<Typedef> {
 
   @override
   String get title =>
-      '${typeDef.name} typedef - ${library.name} library - Dart API';
+      '${typeDef.name} typedef - ${library.name} library - Dart API 中文文档';
   @override
   String get layoutTitle =>
       _layoutTitle(typeDef.nameWithGenerics, 'typedef', typeDef.isDeprecated);
   @override
   String get metaDescription =>
       'API docs for the ${typeDef.name} property from the '
-      '${library.name} library, for the Dart programming language.';
+      '${library.name} library, Dart 中文文档';
   @override
   List get navLinks => [packageGraph, library];
   @override
@@ -427,14 +427,14 @@ class TopLevelPropertyTemplateData extends TemplateData<TopLevelVariable> {
 
   @override
   String get title =>
-      '${property.name} $_type - ${library.name} library - Dart API';
+      '${property.name} $_type - ${library.name} library - Dart API 中文文档';
   @override
   String get layoutTitle =>
       _layoutTitle(property.name, _type, property.isDeprecated);
   @override
   String get metaDescription =>
       'API docs for the ${property.name} $_type from the '
-      '${library.name} library, for the Dart programming language.';
+      '${library.name} library, Dart 中文文档';
   @override
   List get navLinks => [packageGraph, library];
   @override
